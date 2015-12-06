@@ -1,0 +1,14 @@
+class Author < ActiveRecord::Base
+has_many :books
+    def full_name
+      "#{self.name} #{self.surname}"
+    end
+
+    def books_title
+      if self.books
+        self.books.title
+      else
+        "Autor nie napisal ksiazki zadnej"
+      end
+    end
+end
