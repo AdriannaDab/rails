@@ -12,7 +12,12 @@
 
 <p>
   <strong>Books:</strong>
-  <%= @author.books  %>
+  <ul>
+  <% @author.books.each do |book| %>
+  	<li>"<%= book.title %>"
+  <% end %>
+  </ul>
+</p>
     
 	
 
